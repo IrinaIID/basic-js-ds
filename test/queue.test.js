@@ -27,3 +27,4 @@ describe('Queue', async () => {
     assert.strictEqual(JSON.stringify(queue.getUnderlyingList()), listSnapshot);
   });
 });
+
