@@ -23,13 +23,51 @@ const { NotImplementedError } = require('../extensions/index.js');
  * }
  */
 function removeKFromList(l, k) {
-  // let arr = [];
-  // l.forEach(elem => {
-  //   if(elem.value !== k) {
-  //     arr.push(elem)
-  //   }
-  // })
-  // return arr
+
+  class ListNode {
+    constructor(x) {
+      this.value = x;
+      this.next = null;
+    }
+  }
+
+  class LinkedList {
+    constructor() {
+      this.hed = null;
+      this.length = 0;
+    }
+
+    addNode(value) {
+      if(this.length === 0) {
+        this.head = new ListNode(value);
+      } else {
+        let current = this.head;
+        while(current.next) {
+          current = current.next;
+        }
+        current.next = new ListNode(value);
+      }
+      this.length++
+    }
+
+    remove(item) {
+    }
+
+
+
+  }
+
+  let createList = new LinkedList();
+
+  const list = [];
+
+  for (let i = 0; i < l.length; i++) {
+    list.push(new LinkedList(l[i]))
+  }
+
+
+
+
 }
 
 module.exports = {

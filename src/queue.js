@@ -13,6 +13,9 @@ const { NotImplementedError } = require('../extensions/index.js');
  * queue.dequeue(); // returns the top element from queue and deletes it, returns 1
  * queue.getUnderlyingList() // returns { value: 3, next: null }
  */
+
+
+
 class Queue {
 
   constructor() {
@@ -26,8 +29,6 @@ class Queue {
   }
 
   enqueue(value) {
-
-    this.arr.push(value)
 
     class Node {
       constructor(value) {
@@ -58,7 +59,7 @@ class Queue {
     } else {
       let prev = null;
       let index = 0;
-      while(inde < position) {
+      while(index < position) {
         prev = current;
         current = current.next;
         index++
